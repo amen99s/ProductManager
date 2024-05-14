@@ -1,0 +1,39 @@
+﻿<Window x:Class="AminRasoulFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AminRasoulFinal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid RenderTransformOrigin="0.554,0.59">
+            <Button x:Name="btn_clearData" Content="Clear Data" HorizontalAlignment="Left" Margin="182,58,0,0" VerticalAlignment="Top" Height="30" Width="116" Click="Button_Click" FontSize="14" FontWeight="Bold" Background="#FF2276E9" BorderBrush="White" Foreground="White">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <ComboBox x:Name="combobox_getproductByCategory" HorizontalAlignment="Left" Margin="59,158,0,0" VerticalAlignment="Top" Width="239" Height="43" SelectionChanged="combobox_getproductByCategory_SelectionChanged" FontWeight="Bold"/>
+            <Label Content="Get Products By Category
+            " HorizontalAlignment="Left" Margin="59,127,0,0" VerticalAlignment="Top" Width="239" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="txtBox_search" HorizontalAlignment="Left" Margin="54,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="124" Height="24" TextChanged="txtBox_search_TextChanged" FontSize="14"/>
+            <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="204,258,0,0" VerticalAlignment="Top" Height="24" Width="94" Click="btn_search_Click" Background="#FF22E96F" BorderBrush="White" Foreground="White" FontSize="14" FontWeight="Bold">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btn_getAllProduct" Content="Get All Product" HorizontalAlignment="Left" Margin="59,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.575,1.605" Height="30" Width="109" Click="Button_Click_1" FontSize="14" FontWeight="Bold" Background="#FF2276E9" Foreground="White" BorderBrush="#00000000">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+
+            <DataGrid x:Name="grid_data" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="362,58,38,57" SelectionChanged="DataGrid_SelectionChanged"/>
+            <Button x:Name="btn_addNewProdut" Content="Add New Product" HorizontalAlignment="Left" Margin="59,338,0,0" VerticalAlignment="Top" Height="39" Width="239" Click="btn_addNewProdut_Click" FontSize="14" FontWeight="Bold" Background="#FF2276E9" BorderBrush="White" Foreground="White">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
